@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# Charger Images
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/proton/charger,$(TARGET_COPY_OUT_PRODUCT)/etc/res)
+
 # AOSP userdebug/eng CLI tools
 PRODUCT_PACKAGES += \
     arping \
