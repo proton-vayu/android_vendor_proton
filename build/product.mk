@@ -60,6 +60,10 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor \
     libqti_vndfwk_detect.vendor
 
+# Charger mode images
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # AOSP userdebug/eng CLI tools
 PRODUCT_PACKAGES += \
     arping \
