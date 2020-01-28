@@ -24,5 +24,8 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.stock_fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT)
 endif
 
+# Skip boot jars check
+SKIP_BOOT_JARS_CHECK := true
+
 # Kernel
 include vendor/proton/build/BoardConfigKernel.mk
