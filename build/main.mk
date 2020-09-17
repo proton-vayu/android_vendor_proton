@@ -23,3 +23,6 @@ ifneq ($(PRODUCT_OVERRIDE_FINGERPRINT),)
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.stock_fingerprint=$(PRODUCT_OVERRIDE_FINGERPRINT)
 endif
+
+# Kernel
+include vendor/proton/build/BoardConfigKernel.mk
