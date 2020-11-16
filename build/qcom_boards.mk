@@ -83,3 +83,47 @@ MASTER_SIDE_CP_TARGET_LIST := \
 
 # Include QCOM board utilities.
 include vendor/proton/build/utils.mk
+
+# Kernel Families
+5_4_FAMILY := \
+    holi
+
+4_19_FAMILY := \
+    bengal \
+    kona \
+    lito
+
+4_14_FAMILY := \
+    $(MSMSTEPPE) \
+    $(TRINKET) \
+    atoll \
+    msmnile \
+    msmnile_au
+
+4_9_FAMILY := \
+    msm8953 \
+    qcs605 \
+    sdm710 \
+    sdm845
+
+4_4_FAMILY := \
+    msm8998 \
+    sdm660
+
+3_18_FAMILY := \
+    msm8937 \
+    msm8996
+
+ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 5.4
+else ifeq ($(call is-board-platform-in-list,$(4_19_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 4.19
+else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 4.14
+else ifeq ($(call is-board-platform-in-list,$(4_9_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 4.9
+else ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 4.4
+else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 3.18
+endif
