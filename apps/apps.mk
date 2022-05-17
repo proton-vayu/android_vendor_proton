@@ -67,3 +67,7 @@ endif
 # Sandboxed Google Play
 PRODUCT_PACKAGES += \
     GmsCompat \
+
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
